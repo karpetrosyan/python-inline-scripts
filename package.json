@@ -14,25 +14,25 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.createPythonScript",
+        "command": "python-inline-scripts.createPythonScript",
         "title": "New Python Script"
       },
       {
-        "command": "extension.runPythonScript",
+        "command": "python-inline-scripts.runPythonScript",
         "title": "Run Python Script"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.createPythonScript",
+          "command": "python-inline-scripts.createPythonScript",
           "when": "explorerResourceIsFolder",
           "group": "navigation@2"
         }
       ],
       "editor/title": [
         {
-          "command": "extension.runPythonScript",
+          "command": "python-inline-scripts.runPythonScript",
           "when": "resourceLangId == python",
           "group": "navigation"
         }

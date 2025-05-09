@@ -100,13 +100,13 @@ import RunPythonScriptCommand from './commands/runPythonScript';
 
 export async function activate(context: vscode.ExtensionContext) {
   let uvExecutor = await getOrInstallUv(context);
-  const createPythonScript = vscode.commands.registerCommand('extension.createPythonScript', async (uri: vscode.Uri) => {
+  const createPythonScript = vscode.commands.registerCommand('python-inline-scripts.createPythonScript', async (uri: vscode.Uri) => {
     let command = new CreatePythonScriptCommand(uri, uvExecutor);
     await command.execute();
   });
 
 
-  const runPythonScriptCommand = vscode.commands.registerCommand('extension.runPythonScript', async () => {
+  const runPythonScriptCommand = vscode.commands.registerCommand('python-inline-scripts.runPythonScript', async () => {
     const editor = vscode.window.activeTextEditor;
     if (editor) {
       const document = editor.document;
